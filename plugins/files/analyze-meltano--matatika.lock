@@ -1,0 +1,21 @@
+{
+  "plugin_type": "files",
+  "name": "analyze-meltano",
+  "namespace": "tap_meltano",
+  "variant": "matatika",
+  "label": "Meltano Insights",
+  "repo": "https://github.com/Matatika/analyze-meltano",
+  "pip_url": "git+https://github.com/Matatika/analyze-meltano@v0.4.0",
+  "description": "Instant insights on jobs from Meltano.",
+  "requires": {
+    "transforms": [
+      {
+        "name": "dbt-meltano",
+        "variant": "matatika"
+      }
+    ]
+  },
+  "update": {
+    "*.yml": "true"
+  }
+}

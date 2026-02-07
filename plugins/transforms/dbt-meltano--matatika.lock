@@ -1,0 +1,27 @@
+{
+  "plugin_type": "transforms",
+  "name": "dbt-meltano",
+  "namespace": "tap_meltano",
+  "variant": "matatika",
+  "label": "dbt-meltano",
+  "repo": "https://github.com/Matatika/dbt-tap-meltano",
+  "pip_url": "https://github.com/Matatika/dbt-tap-meltano@v0.4.0",
+  "description": " Meltano is an open source project that manages data plugins and python virtual environments.\nMatatika extracts the data from Meltano and creates out of the box insights with this plugin.\n",
+  "requires": {
+    "transformers": [
+      {
+        "name": "dbt",
+        "variant": "dbt-labs"
+      }
+    ],
+    "extractors": [
+      {
+        "name": "tap-meltano",
+        "variant": "matatika"
+      }
+    ]
+  },
+  "vars": {
+    "schema": "{{ env_var('DBT_SOURCE_SCHEMA') }}"
+  }
+}
