@@ -3,6 +3,34 @@ name: Meltano
 domains:
 - ai-elements.com
 - ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
+- ai-elements.com
 app_properties:
   WELCOME_DATASET_ALIAS: welcome
 default_data_store: Warehouse
