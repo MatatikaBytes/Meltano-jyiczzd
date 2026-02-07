@@ -1,0 +1,290 @@
+{
+  "plugin_type": "loaders",
+  "name": "target-s3",
+  "namespace": "target_s3",
+  "variant": "crowemi",
+  "label": "S3 (Multi Format)",
+  "docs": "https://www.matatika.com/data-details/target-s3/",
+  "repo": "https://github.com/crowemi/target-s3",
+  "pip_url": "git+https://github.com/crowemi/target-s3.git",
+  "executable": "target-s3",
+  "description": "S3 (Multi Format) is not a specific company, software, service, or tool, so I cannot provide a single-sentence description overview or paragraph on what it does. Can you please provide more information or clarify your request?",
+  "logo_url": "/assets/logos/loaders/s3.png",
+  "capabilities": [
+    "schema-flattening",
+    "about",
+    "stream-maps"
+  ],
+  "settings": [
+    {
+      "name": "append_date_to_filename",
+      "kind": "boolean",
+      "value": true,
+      "label": "Append Date To Filename",
+      "description": "Boolean value indicating whether to append the current date to the filename",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "append_date_to_filename_grain",
+      "kind": "options",
+      "value": "day",
+      "label": "Append Date To Filename Grain",
+      "description": "Granularity of the date to be appended to the filename",
+      "options": [
+        {
+          "label": "Year",
+          "value": "year"
+        },
+        {
+          "label": "Month",
+          "value": "month"
+        },
+        {
+          "label": "Day",
+          "value": "day"
+        },
+        {
+          "label": "Hour",
+          "value": "hour"
+        },
+        {
+          "label": "Minute",
+          "value": "minute"
+        },
+        {
+          "label": "Second",
+          "value": "second"
+        },
+        {
+          "label": "Microsecond",
+          "value": "microsecond"
+        }
+      ],
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "append_date_to_prefix",
+      "kind": "boolean",
+      "value": true,
+      "label": "Append Date To Prefix",
+      "description": "Boolean value indicating whether to append the current date to the prefix",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "append_date_to_prefix_grain",
+      "kind": "options",
+      "value": "day",
+      "label": "Append Date To Prefix Grain",
+      "description": "Granularity of the date to be appended to the prefix",
+      "options": [
+        {
+          "label": "Year",
+          "value": "year"
+        },
+        {
+          "label": "Month",
+          "value": "month"
+        },
+        {
+          "label": "Day",
+          "value": "day"
+        },
+        {
+          "label": "Hour",
+          "value": "hour"
+        },
+        {
+          "label": "Minute",
+          "value": "minute"
+        },
+        {
+          "label": "Second",
+          "value": "second"
+        },
+        {
+          "label": "Microsecond",
+          "value": "microsecond"
+        }
+      ],
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "cloud_provider.aws.aws_access_key_id",
+      "kind": "string",
+      "label": "Cloud Provider AWS AWS Access Key ID",
+      "description": "Access key ID for the AWS account",
+      "hidden": false,
+      "sensitive": true,
+      "protected": false
+    },
+    {
+      "name": "cloud_provider.aws.aws_bucket",
+      "kind": "string",
+      "label": "Cloud Provider AWS AWS Bucket",
+      "description": "Name of the S3 bucket to connect to",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "cloud_provider.aws.aws_endpoint_override",
+      "kind": "string",
+      "label": "Cloud Provider AWS AWS Endpoint Override",
+      "description": "Endpoint override for the AWS S3 API",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "cloud_provider.aws.aws_profile_name",
+      "kind": "string",
+      "label": "Cloud Provider AWS AWS Profile Name",
+      "description": "Name of the AWS profile to use for authentication",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "cloud_provider.aws.aws_region",
+      "kind": "string",
+      "label": "Cloud Provider AWS AWS Region",
+      "description": "AWS region where the S3 bucket is located",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "cloud_provider.aws.aws_secret_access_key",
+      "kind": "string",
+      "label": "Cloud Provider AWS AWS Secret Access Key",
+      "description": "Secret access key for the AWS account",
+      "hidden": false,
+      "sensitive": true,
+      "protected": false
+    },
+    {
+      "name": "cloud_provider.cloud_provider_type",
+      "kind": "string",
+      "value": "aws",
+      "label": "Cloud Provider Cloud Provider Type",
+      "description": "Type of cloud provider being used",
+      "options": [
+        {
+          "label": "AWS",
+          "value": "aws"
+        }
+      ],
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "flatten_records",
+      "kind": "boolean",
+      "label": "Flatten Records",
+      "description": "Boolean value indicating whether to flatten nested records",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "flattening_enabled",
+      "kind": "boolean",
+      "label": "Flattening Enabled",
+      "description": "Boolean value indicating whether flattening is enabled",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "flattening_max_depth",
+      "kind": "integer",
+      "label": "Flattening Max Depth",
+      "description": "Maximum depth of nested records to flatten",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "format.format_parquet.validate",
+      "kind": "boolean",
+      "label": "Format Format Parquet Validate",
+      "description": "Boolean value indicating whether to validate Parquet format",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "format.format_type",
+      "kind": "options",
+      "label": "Format Format Type",
+      "description": "Type of file format to use",
+      "options": [
+        {
+          "label": "Parquet",
+          "value": "parquet"
+        },
+        {
+          "label": "Json",
+          "value": "json"
+        }
+      ],
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "include_process_date",
+      "kind": "boolean",
+      "label": "Include Process Date",
+      "description": "Boolean value indicating whether to include the process date in the output",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "prefix",
+      "kind": "string",
+      "label": "Prefix",
+      "description": "Prefix to use for the S3 object key",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "stream_map_config",
+      "kind": "object",
+      "label": "Stream Map Config",
+      "description": "Configuration for stream mapping",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "stream_maps",
+      "kind": "object",
+      "label": "Stream Maps",
+      "description": "List of stream maps",
+      "hidden": false,
+      "sensitive": false,
+      "protected": false
+    },
+    {
+      "name": "stream_name_path_override",
+      "kind": "string",
+      "label": "Stream Name Path Override",
+      "description": "Override for the stream name path",
+      "hidden": false,
+      "sensitive": true,
+      "protected": false
+    }
+  ]
+}

@@ -14,6 +14,9 @@ plugins:
   - name: target-postgres
     variant: matatika
     pip_url: git+https://github.com/Matatika/pipelinewise-target-postgres.git@v0.2.1
+  - name: target-s3
+    variant: crowemi
+    pip_url: git+https://github.com/crowemi/target-s3.git
   transforms:
   - name: dbt-meltano
     variant: matatika
